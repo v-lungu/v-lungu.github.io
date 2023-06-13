@@ -26,11 +26,11 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Hi, my name is Vlad Lungu and I am a recent Bachelor's of
+                Hi my name is Vlad Lungu and I am a recent Bachelor&apos;s of
                 Computer Science graduate from The University of British
-                Columbia. This is my second bachelor's earned from UBC, with my
-                first being in biology. Now I'm on a quest to get hired and
-                begin my journey as a professional software developer.
+                Columbia. This is my second bachelor&apos;s earned from UBC,
+                with my first being in biology. Now I&apos;m on a quest to get
+                hired and begin my journey as a professional software developer.
               </p>
 
               <p className="font-medium my-4">
@@ -52,14 +52,15 @@ const about = () => {
               <p className="font-medium">
                 Outside of coding i have a wide array of interests and hobbies.
                 My biggest passion right now is dance; I am an avid latin dancer
-                and love dancing both bachata and salsa (though I'm a bit
+                and love dancing both bachata and salsa (though I&apos;m a bit
                 rusty). Going to the gym has also become a big part of my daily
-                life, and for the first time in my life I've really dedicated
-                myself to my health in both the gym and the kitchen. Currently
-                I'm trying to improve my artistic side by learning how to draw
-                and hopefully pretty soon picking up painting. Finally I love
-                watching movies, tv shows, anime, and reading books in my spare
-                time. There are so many amazing stories out there.
+                life, and for the first time in my life I&apos;ve really
+                dedicated myself to my health in both the gym and the kitchen.
+                Currently I&apos;m trying to improve my artistic side by
+                learning how to draw and hopefully pretty soon picking up
+                painting. Finally I love watching movies, tv shows, anime, and
+                reading books in my spare time. There are so many amazing
+                stories out there.
               </p>
             </div>
             <div className="col-span-2 md:col-span-8 relative h-max rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-light p-8">

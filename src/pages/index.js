@@ -34,7 +34,8 @@ export default function Home() {
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 I am an up and coming software developer intent on writing
                 beautiful code for meaningful projects. I hope you enjoy your
-                stay and reach out to me if you've got anything at all to say.
+                stay and reach out to me if you&apos;ve got anything at all to
+                say.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
