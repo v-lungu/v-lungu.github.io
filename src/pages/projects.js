@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/spellcheck.jpg";
+import project2 from "../../public/images/projects/beavers.jpg";
 
 const FeaturedProject = ({ type, title, summary, img, link }) => {
   return (
@@ -113,15 +114,16 @@ const projects = () => {
                 type="Featured Project"
               />
             </div>
-            {/* <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Bayes Spell Checker"
-                summary="A spell checker that uses Bayes to predict single and double letter errors in mispelled words based on probability"
-                img={project1}
-                link="https://github.com/v-lungu/SpellChecker"
-                type="C++"
+            <div className="col-span-6 sm:col-span-12">
+              <FeaturedProject
+                title="Beaver Scouts Manager"
+                summary="Manager for a Beaver Scouts colony. This app features both a back and front end that allows for management of members
+                of the colony, their guardians, and activities."
+                img={project2}
+                link="https://github.com/v-lungu/beavers-manager"
+                type="Node and Next.js"
               />
-            </div> */}
+            </div>
           </div>
         </Layout>
       </main>
