@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <title>Vlad's Homepage</title>
         <meta
-          name="Vlad Lungu's personal portfolio"
+          name="Vlad Lungu Personal Website"
           content="created by Vlad Lungu"
         />
       </Head>
