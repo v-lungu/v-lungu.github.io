@@ -114,14 +114,14 @@ const projects = () => {
                 type="Featured Project"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
+            <div className="col-span-12 sm:col-span-12">
               <FeaturedProject
                 title="Beaver Scouts Manager"
                 summary="Manager for a Beaver Scouts colony. This app features both a back and front end that allows for management of members
                 of the colony, their guardians, and activities."
                 img={project2}
                 link="https://github.com/v-lungu/beavers-manager"
-                type="Node and Next.js"
+                type="Node, Next.js"
               />
             </div>
           </div>
