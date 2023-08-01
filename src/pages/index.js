@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vlad's Homepage</title>
+        <title>Vlad&apos;s Homepage</title>
         <meta
           name="Vlad Lungu Personal Website"
           content="created by Vlad Lungu"
