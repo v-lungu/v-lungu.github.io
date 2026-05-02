@@ -43,7 +43,7 @@ export default function Home() {
                 className="!text-6xl !text-justify !leading-[1.2] xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                Hello! I'm up and coming software developer passionate about improving lives through code, music, open collaboration. I hope you enjoy your stay and reach out to me if you spot anything that piques your interest.
+                Hello! I&apos;m up and coming software developer passionate about improving lives through code, music, open collaboration. I hope you enjoy your stay and reach out to me if you spot anything that piques your interest.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
