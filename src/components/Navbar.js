@@ -6,6 +6,7 @@ import { GithubIcon, LinkedinIcon, MoonIcon, SunIcon } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import { useState } from "react";
+import { GITHUB_URL, LINKEDIN_URL } from "@/constants";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -58,6 +59,7 @@ const NavBar = () => {
       <button
         className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
+        aria-label="Toggle menu"
       >
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
@@ -84,7 +86,7 @@ const NavBar = () => {
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
-            href="https://github.com/v-lungu"
+            href={GITHUB_URL}
             target={"_blank"}
             rel="noopener noreferrer"
             whileHover={{ y: -2 }}
@@ -94,7 +96,7 @@ const NavBar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/vlad-lungu-175b29178/"
+            href={LINKEDIN_URL}
             target={"_blank"}
             rel="noopener noreferrer"
             whileHover={{ y: -2 }}
@@ -120,7 +122,8 @@ const NavBar = () => {
       </div>
 
       {isOpen ? (
-        <motion.div
+        <motion.nav
+          aria-label="Mobile navigation"
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
           className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
@@ -178,7 +181,7 @@ const NavBar = () => {
               )}
             </button>
           </nav>
-        </motion.div>
+        </motion.nav>
       ) : null}
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">

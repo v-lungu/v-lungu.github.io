@@ -7,7 +7,7 @@ import Image from "next/image";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 
-const about = () => {
+const About = () => {
   return (
     <>
       <Head>
@@ -60,6 +60,7 @@ const about = () => {
                 </p>
                 <button
                   onClick={() => document.getElementById("experience-education").scrollIntoView({ behavior: "smooth" })}
+                  aria-label="Scroll to Experience and Education section"
                   className="mt-6 flex items-center gap-2 text-sm font-semibold text-dark dark:text-light border-2 border-solid border-dark dark:border-light rounded-lg px-4 py-2 hover:bg-dark hover:text-light dark:hover:bg-light dark:hover:text-dark transition-colors"
                 >
                   Experience &amp; Education
@@ -104,4 +105,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
