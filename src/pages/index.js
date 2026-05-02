@@ -22,9 +22,9 @@ export default function Home() {
 
       <main className="flex items-center text-dark dark:text-light w-full h-[calc(100vh-5.5rem)]">
         <Layout className="pt-0 pb-0 md:pt-16 sm:pt-8 h-full">
-          <div className="flex items-center justify-between w-full h-full">
-            <div className="w-1/2 md:w-full flex items-center justify-center lg:hidden">
-              <div className="relative">
+          <div className="flex items-center justify-between w-full h-full pb-12">
+            <div className="w-1/2 md:w-full flex items-center justify-center self-center lg:hidden">
+              <div className="relative mt-3">
                 <div className="absolute top-0 -right-3 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-shadowAccent" />
                 <div className="relative rounded-2xl border-2 border-solid border-dark dark:border-shadowAccent overflow-hidden">
                   <Image
