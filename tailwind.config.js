@@ -11,10 +11,14 @@ module.exports = {
         mont: ["var(--font-mont)"],
       },
       colors: {
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
-        primary: "#B63E96", // 240,86,199
-        primaryDark: "#58E6D9", // 80,230,217
+        dark: "#0F1E2A",
+        light: "#F0F9FF",
+        primary: "#22D3EE",
+        primaryDark: "#6EE7B7",
+        panelDark: "#162636",
+        shadowAccent: "#1B4F72",
+        navbar: "#DBEAFE",
+        navbarDark: "#1E3A5F",
       },
     },
     screens: {

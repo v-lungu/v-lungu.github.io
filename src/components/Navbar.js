@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import React from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
@@ -27,16 +27,11 @@ const CustomLink = ({ href, title, className = "" }) => {
 const CustomMobileLink = ({ href, title, toggle, className = "" }) => {
   const router = useRouter();
 
-  const handleClick = () => {
-    router.push(href);
-    toggle();
-  };
-
   return (
-    <button
+    <Link
       href={href}
       className={`${className} relative group text-light dark:text-dark my-2`}
-      onClick={handleClick}
+      onClick={toggle}
     >
       {title}
       <span
@@ -46,7 +41,7 @@ const CustomMobileLink = ({ href, title, toggle, className = "" }) => {
       >
         &nbsp;
       </span>
-    </button>
+    </Link>
   );
 };
 
@@ -59,7 +54,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8 bg-navbar dark:bg-navbarDark">
       <button
         className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
@@ -91,6 +86,7 @@ const NavBar = () => {
           <motion.a
             href="https://github.com/v-lungu"
             target={"_blank"}
+            rel="noopener noreferrer"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
@@ -100,6 +96,7 @@ const NavBar = () => {
           <motion.a
             href="https://www.linkedin.com/in/vlad-lungu-175b29178/"
             target={"_blank"}
+            rel="noopener noreferrer"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
