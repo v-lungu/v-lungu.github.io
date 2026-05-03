@@ -21,13 +21,13 @@ const About = () => {
       </Head>
       <main className="flex w-full flex-col dark:text-light">
 
-        <section className="h-[calc(100vh-5.5rem)]">
+        <section className="h-[calc(100vh-5.5rem)] md:h-auto">
           <Layout className="pt-8 pb-0 h-full flex flex-col">
             <AnimatedText
               text="What's Going on Here?!"
               className="!text-6xl mb-6 lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-4"
             />
-            <div className="flex w-full gap-6 flex-1 items-start md:flex-col">
+            <div className="flex w-full gap-6 flex-1 items-start md:flex-col md:gap-4">
               <div className="w-3/5 md:w-full flex flex-col">
                 <p className="font-medium text-sm text-justify">
                   Hi my name is Vlad Lungu and I am a Bachelor&apos;s of
@@ -61,7 +61,7 @@ const About = () => {
                 <button
                   onClick={() => document.getElementById("experience-education").scrollIntoView({ behavior: "smooth" })}
                   aria-label="Scroll to Experience and Education section"
-                  className="mt-6 flex items-center gap-2 text-sm font-semibold text-dark dark:text-light border-2 border-solid border-dark dark:border-light rounded-lg px-4 py-2 hover:bg-dark hover:text-light dark:hover:bg-light dark:hover:text-dark transition-colors"
+                  className="mt-6 flex items-center gap-2 text-sm font-semibold text-dark dark:text-light border-2 border-solid border-dark dark:border-light rounded-lg px-4 py-2 hover:bg-dark hover:text-light dark:hover:bg-light dark:hover:text-dark transition-colors xs:text-xs xs:px-3 xs:py-1.5 md:hidden"
                 >
                   Experience &amp; Education
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -69,14 +69,14 @@ const About = () => {
                   </svg>
                 </button>
               </div>
-              <div className="w-2/5 md:w-full flex items-start justify-center py-0">
+              <div className="w-2/5 md:w-full flex items-start justify-center py-0 md:order-first md:mb-4">
                 <div className="relative">
                   <div className="absolute top-0 -right-3 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-shadowAccent" />
                   <div className="relative rounded-2xl border-2 border-solid border-dark bg-light dark:bg-dark dark:border-shadowAccent p-6">
                     <Image
                       src={profilePic}
                       alt="Vlad Lungu"
-                      className="w-full h-auto max-h-[60vh] object-contain rounded-2xl"
+                      className="w-full h-auto max-h-[60vh] md:max-h-[45vh] sm:max-h-[35vh] object-contain rounded-2xl"
                       priority
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                     />
@@ -89,7 +89,7 @@ const About = () => {
 
         <div id="experience-education" className="min-h-screen">
         <Layout className="pt-8 pb-16">
-          <div className="flex w-full gap-12 md:flex-col">
+          <div className="flex w-full gap-12 md:flex-col md:gap-6">
             <div className="w-1/2 md:w-full">
               <Experience />
             </div>

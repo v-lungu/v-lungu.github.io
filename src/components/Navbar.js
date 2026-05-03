@@ -8,11 +8,11 @@ import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import { useState } from "react";
 import { GITHUB_URL, LINKEDIN_URL } from "@/constants";
 
-const CustomLink = ({ href, title, className = "" }) => {
+const CustomLink = ({ href, title, className = "", target, rel }) => {
   const router = useRouter();
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} target={target} rel={rel} className={`${className} relative group`}>
       {title}
       <span
         className={`h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
@@ -25,12 +25,14 @@ const CustomLink = ({ href, title, className = "" }) => {
   );
 };
 
-const CustomMobileLink = ({ href, title, toggle, className = "" }) => {
+const CustomMobileLink = ({ href, title, toggle, className = "", target, rel }) => {
   const router = useRouter();
 
   return (
     <Link
       href={href}
+      target={target}
+      rel={rel}
       className={`${className} relative group text-light dark:text-dark my-2`}
       onClick={toggle}
     >
@@ -82,7 +84,8 @@ const NavBar = () => {
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
           <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink href="/projects" title="Projects" className="ml-4" />
+          <CustomLink href="/projects" title="Projects" className="mx-4" />
+          <CustomLink href="/cv.pdf" title="CV" className="ml-4" target="_blank" rel="noopener noreferrer" />
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
@@ -126,27 +129,13 @@ const NavBar = () => {
           aria-label="Mobile navigation"
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
+          className="min-w-[70vw] xs:min-w-[85vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32 xs:py-20"
         >
           <nav className="flex items-center flex-col justify-center">
-            <CustomMobileLink
-              href="/"
-              title="Home"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/about"
-              title="About"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/projects"
-              title="Projects"
-              className=""
-              toggle={handleClick}
-            />
+            <CustomMobileLink href="/" title="Home" toggle={handleClick} />
+            <CustomMobileLink href="/about" title="About" toggle={handleClick} />
+            <CustomMobileLink href="/projects" title="Projects" toggle={handleClick} />
+            <CustomMobileLink href="/cv.pdf" title="CV" toggle={handleClick} target="_blank" rel="noopener noreferrer" />
           </nav>
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a

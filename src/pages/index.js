@@ -40,7 +40,7 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:flex-col lg:text-center">
               <AnimatedText
                 text="Welcome to my website everything I'm interested in goes here."
-                className="!text-6xl !text-justify !leading-[1.2] xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                className="!text-6xl !text-justify !leading-[1.2] xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl xs:!text-2xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 Hello! I&apos;m up and coming software developer passionate about improving lives through code, music, open collaboration. I hope you enjoy your stay and reach out to me if you spot anything that piques your interest.
@@ -50,7 +50,7 @@ export default function Home() {
                   href="/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center bg-dark text-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:border-light hover:dark:text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark md:p-2 md:px-4 md:text-base"
+                  className="flex items-center bg-dark text-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:border-light hover:dark:text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark md:p-2 md:px-4 md:text-base xs:px-3 xs:text-sm"
                   download={true}
                 >
                   Resume <LinkArrow className="w-6 ml-1" />
@@ -59,7 +59,7 @@ export default function Home() {
                   href={`mailto:${EMAIL}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-4 text-lg font-medium capitalize text-dark dark:text-light underline md:text-base"
+                  className="ml-4 text-lg font-medium capitalize text-dark dark:text-light underline md:text-base xs:text-sm"
                 >
                   Contact
                 </Link>

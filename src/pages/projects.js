@@ -9,12 +9,12 @@ const Project = ({ type, title, summary, link }) => {
   return (
     <div className="relative">
       <div className="absolute top-0 -right-3 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-shadowAccent" />
-      <article className="relative w-full h-full flex flex-col rounded-2xl border border-solid border-dark bg-light dark:bg-panelDark dark:border-shadowAccent p-8">
+      <article className="relative w-full h-full flex flex-col rounded-2xl border border-solid border-dark bg-light dark:bg-panelDark dark:border-shadowAccent p-8 sm:p-6 xs:p-4">
         <span className="text-primary dark:text-primaryDark font-medium text-sm">
           {type}
         </span>
         <Link href={link} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-2">
-          <h2 className="my-2 w-full text-left text-2xl font-bold dark:text-light">
+          <h2 className="my-2 w-full text-left text-2xl font-bold dark:text-light sm:text-xl xs:text-lg">
             {title}
           </h2>
         </Link>
@@ -50,7 +50,7 @@ const Projects = () => {
             className="!text-6xl mb-6 lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-4"
           />
           <h2 className="font-bold text-3xl mb-4 md:text-2xl xs:text-xl">Projects</h2>
-          <div className="grid grid-cols-2 gap-12 md:grid-cols-1">
+          <div className="grid grid-cols-2 gap-12 md:grid-cols-1 md:gap-8 sm:gap-6">
             <Project
               title="Spotify Artist Tracker"
               summary="Full-stack web app using the Spotify API to auto-generate playlists from a user-defined artist watchlist, with filters for genre, release date, and artist. Implements OAuth 2.0 authentication and a REST API backend in Python for Spotify token management."
@@ -66,7 +66,7 @@ const Projects = () => {
           </div>
 
           <h2 className="font-bold text-3xl mt-8 mb-4 md:text-2xl xs:text-xl">Scripts</h2>
-          <div className="grid grid-cols-2 gap-12 md:grid-cols-1">
+          <div className="grid grid-cols-2 gap-12 md:grid-cols-1 md:gap-8 sm:gap-6">
             <Project
               title="Rekordbox Filename Sync"
               summary="Python script for synchronizing and standardizing music file names for use with Rekordbox DJ software."
